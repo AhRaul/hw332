@@ -12,6 +12,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "ToolbarActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            //Log.d(TAG, "onOptionItemSelected: ");
+            return true;
+        } else if (id == android.R.id.home) {
+            Log.d(TAG, "onOptionItemSelected: ");
             return true;
         }
 
